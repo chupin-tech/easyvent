@@ -1,5 +1,7 @@
 plugins {
     id("java")
+    id("checkstyle")
+    id("org.ec4j.editorconfig") version "0.1.0"
 }
 
 group = "org.chupin"
@@ -17,3 +19,13 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+checkstyle {
+    configFile = file("config/checkstyle/intellij-java-google-style.xml")
+    configProperties = mapOf("suppressionFile" to "config/checkstyle/suppressions.xml")
+}
+
+tasks.named("check") {
+    dependsOn("editorconfigCheck")
+}
+
