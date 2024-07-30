@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
  * This class provides methods to check the value status. Methods have to be included common
  * context.
  *
- * @author monorisk
+ * @author monorisk, seungjoopet
  */
 public final class Validation {
 	private Validation() {
