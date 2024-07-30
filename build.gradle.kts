@@ -21,11 +21,14 @@ tasks.test {
 }
 
 checkstyle {
-    configFile = file("config/checkstyle/intellij-java-google-style.xml")
-    configProperties = mapOf("suppressionFile" to "config/checkstyle/suppressions.xml")
+    configFile = file("config/checkstyle/naver-checkstyle-rules.xml")
+    configProperties = mapOf("suppressionFile" to "config/checkstyle/naver-checkstyle-suppressions.xml")
 }
 
 tasks.named("check") {
     dependsOn("editorconfigCheck")
 }
 
+editorconfig {
+    excludes = listOf(".github/**", "gradle/**", "gradlew", "gradlew.bat")
+}
