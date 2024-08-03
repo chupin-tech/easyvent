@@ -80,6 +80,7 @@ sonar {
 //        property("sonar.test.exclusions", "jacocoExcludePatterns.join(',')")
         property("sonar.test.inclusions", "**/*Test.groovy")
         property("sonar.java.coveragePlugin", "jacoco")
+        property("sonar.java.binaries", "build/classes")
         property(
             "sonar.coverage.jacoco.xmlReportPaths",
             "build/reports/jacoco/test/jacocoTestReport.xml"
