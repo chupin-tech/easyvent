@@ -10,6 +10,11 @@ public class BarSolver {
         if (1 == 1) {
             System.out.println("hello world");
         }
+
+        if (1 == 1) {
+            System.out.println("Aaaa");
+        }
+
     }
 
 }
